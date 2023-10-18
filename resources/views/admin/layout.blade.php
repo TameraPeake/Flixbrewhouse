@@ -1,10 +1,10 @@
 <?php
-    try {
-        \DB::connection()->getPDO();
-        echo \DB::connection()->getDatabaseName();
-        } catch (\Exception $e) {
-        echo 'None';
-    }
+    // try {
+    //     \DB::connection()->getPDO();
+    //     echo \DB::connection()->getDatabaseName();
+    //     } catch (\Exception $e) {
+    //     echo 'None';
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">

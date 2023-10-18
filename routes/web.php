@@ -43,6 +43,19 @@ Route::get('flixpicks', function () {
     return Inertia::render('FlixPicks');
 });
 
+
+/*
+Common Resource Routes
+Index - show all listings
+Show - Show single listing
+Create - show form to create new listing
+Store - Store new Listing
+Edit - show form to edit listing
+Update - update edited listing
+Destroy - delete listing
+
+*/
+
 //Show login form
 Route::get('/admin/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 
