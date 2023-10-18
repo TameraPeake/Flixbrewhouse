@@ -1,0 +1,45 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*adding custom styling components- like mixins*/
+@layer utilities {
+    #topMenu button a {
+        text-transform: uppercase !important;
+    }
+
+    #footerLinks button a {
+        @apply text-flixYellowHover font-extrabold hover:text-white !py-1;
+    }
+};
+@layer base {
+    .h2 {
+        @apply hover:text-flixYellowHover font-extrabold uppercase;
+        color: #fff;
+        font-family: "proximaNovaRegThin", sans-serif;
+        font-size: 22px;
+    }
+
+    .h3 {
+        @apply hover:text-flixYellowHover font-extrabold;
+        color: #fff;
+        font-family: "proximaNovaRegThin", sans-serif;
+        font-size: 18px;
+    }
+
+}
+
+
+
+
+
+/*adding custom font*/
+@font-face {
+    font-family: "proximaNovaReg";
+    src: url("/public/build/assets/fonts/proxima-nova-condensed/MarkSimonsonProximaNovaCondensedRegular.woff");
+}
+
+@font-face {
+    font-family: "proximaNovaRegThin";
+    src: url("/public/build/assets/fonts/proxima-nova-condensed/MarkSimonsonProximaNovaThin.woff");
+}
