@@ -3,10 +3,10 @@
 @section('content')
     <div class="py-5 px-10">
         <header class="text-center">
-            <h2 class="text-2xl font-bold uppercase mb-1">
+            <h1 class="h1 mb-1">
                 Login
-            </h2>
-            <p class="mb-4">Login to your account</p>
+            </h1>
+            <p class="mb-4 h2">Login to your account</p>
         </header>
 
         <form method="POST" action="/users/authenticate">

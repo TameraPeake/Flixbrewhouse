@@ -33,14 +33,29 @@ Destroy - delete listing
             'password' => 'required'
         ]);
 
-    // echo var_dump(auth()->attempt($formFields));
         if(auth()->attempt($formFields)) {
             $request->session()->regenerate();
 
-            return redirect('/AdminHome')->with('message', 'You are now logged in!');
+            return redirect('admin/home')->with('message', 'You are now logged in!');
         }
 
         return back()->withErrors(['email'=> 'Invalid Credentials'])->onlyInput('email');
 
     }
+
+    //show adminHome
+    public function adminHome() {
+        return view('admin.home');
+    }
+
+    //user logout
+    public function logout(Request $request) {
+        auth()->logout(); //this removes the authentication info from user session
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/')->with('message', 'You have been logged out.');
+    }
+
 }

@@ -62,6 +62,12 @@ Route::get('/admin/login', [UserController::class, 'login'])->name('login')->mid
 //Log in user
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
+//Log user out
+Route::post('/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');
+
+//Show Admin Home
+Route::get('/admin/home', [UserController::class, 'adminHome'])->name('home')->middleware('auth');
+
 Route::get('AdminHome', function () {
     return Inertia::render('AdminHome');
 })->middleware(['auth', 'verified'])->name('AdminHome');

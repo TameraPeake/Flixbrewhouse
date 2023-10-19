@@ -7,7 +7,7 @@ const topMenuArray = {
         icon: true,
         iconPath: LoginImg,
         text: "Join/Log in to the circle",
-        link: "AdminHome",
+        link: "/admin/home",
     },
 
     secondItem : {

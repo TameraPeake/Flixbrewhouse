@@ -28,9 +28,14 @@
             <a href="/"><img src="{{ asset('/build/assets/img/flixLogo.png') }}" class="w-full" /></a>
         </div>
 
-        <a href="/Logout" class="flex justify-around items-end h2 cursor-pointer">
-            <img src="{{ asset('/build/assets/img/flix_icon_login-ylw.svg') }}" class="w-10 pr-2" /> Log In
-        </a>
+        <div>
+            <form class="h2-btn cursor-pointer" method="POST" action="/logout">
+                @csrf
+                <button type="submit" class="flex justify-around items-end">
+                    <img src="{{ asset('/build/assets/img/flix_icon_login-ylw.svg') }}" class="w-10 pr-2" />Logout
+                </button>
+            </form>
+        </div>
 
     </header>
     <main class="font-sans antialiased bg-woodBG min-h-screen bg-cover">
