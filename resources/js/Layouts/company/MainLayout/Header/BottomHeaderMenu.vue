@@ -1,6 +1,6 @@
 <script setup>
 //This creates the menu for the top header and loops through it through props that assign the page links
-import LargeTextLinks from "/resources/js/Components/LargeTextLinks.vue";
+import LargeTxtBtn from "/resources/js/Components/LargeTxtBtn.vue";
 import FlixLogoImg from "/public/build/assets/img/flixLogo.png";
 const bottomMenuArray = {
     firstItem : {
@@ -154,7 +154,7 @@ const dropDownMenus = {
 <template>
     <div class="flex justify-between bg-black text-white items-center flex-wrap w-full p-4">
         <a href="/"><img :src=FlixLogoImg class="w-64" /></a>
-        <LargeTextLinks :menuArray="bottomMenuArray" :dropDownMenus="dropDownMenus" />
+        <LargeTxtBtn :menuArray="bottomMenuArray" :dropDownMenus="dropDownMenus" />
     </div>
 
 

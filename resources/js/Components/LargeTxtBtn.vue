@@ -14,7 +14,7 @@ let dropDownItem = ref("");
         <div v-else>
             <button
                 type="button"
-                class="p-4 h2 flex"
+                class="p-4 h2-btn flex"
                 @click="hover = !hover, dropDownItem = value.text"
             >
                 <div v-if="value.dropDown">
@@ -22,7 +22,7 @@ let dropDownItem = ref("");
                     {{ value.text }}
                 </div>
                 <div v-else>
-                    <a :href="value.link" class="p-4 h2 flex">
+                    <a :href="value.link" class="p-4 h2-btn flex">
                         <img :src="value.iconPath"  v-if="value.icon" class="w-6 pr-2">
                         {{ value.text }}
                     </a>
@@ -40,7 +40,7 @@ let dropDownItem = ref("");
             <div v-for="dropdownValue in dropDownMenus">
                 <button
                     type="button"
-                    class="h3 p-4 px-5"
+                    class="h3-btn p-4 px-5"
                     v-if="dropdownValue.subMenu == dropDownItem"
                 >
                     {{ dropdownValue.text }}

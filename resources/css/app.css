@@ -13,7 +13,20 @@
     }
 };
 @layer base {
+    .h1 {
+        @apply text-flixYellowHover font-black uppercase;
+        font-family: "proximaNovaReg", sans-serif;
+        font-size: 56px;
+    }
+
     .h2 {
+        @apply font-extrabold uppercase;
+        color: #fff;
+        font-family: "proximaNovaRegThin", sans-serif;
+        font-size: 22px;
+    }
+
+    .h2-btn {
         @apply hover:text-flixYellowHover font-extrabold uppercase;
         color: #fff;
         font-family: "proximaNovaRegThin", sans-serif;
@@ -21,6 +34,13 @@
     }
 
     .h3 {
+        @apply text-flixYellowHover font-extrabold;
+        color: #fff;
+        font-family: "proximaNovaRegThin", sans-serif;
+        font-size: 18px;
+    }
+
+    .h3-btn {
         @apply hover:text-flixYellowHover font-extrabold;
         color: #fff;
         font-family: "proximaNovaRegThin", sans-serif;

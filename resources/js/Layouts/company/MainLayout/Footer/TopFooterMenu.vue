@@ -1,6 +1,6 @@
 <script setup>
 import FlixLogoImg from "/public/build/assets/img/flixLogo.png";
-import SmallTextLinks from "/resources/js/Components/SmallTextLinks.vue";
+import SmallTxtBtn from "/resources/js/Components/SmallTxtBtn.vue";
 const topFooterMenuArray = {
     "Locations": {
         firstItem : {
@@ -164,7 +164,7 @@ const topFooterMenuArray = {
         </div>
         <div v-for="(topFooterItems, topFooterTitles ) in topFooterMenuArray" id="footerLinks">
             <div class="text-white pl-3 text-lg">{{ topFooterTitles }}</div>
-            <SmallTextLinks :menuArray="topFooterItems"/>
+            <SmallTxtBtn :menuArray="topFooterItems"/>
         </div>
     </div>
 </template>

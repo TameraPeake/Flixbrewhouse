@@ -1,6 +1,6 @@
 <script setup>
 //This creates the menu for the top header and loops through it through props that assign the page links
-import SmallTextLinks from "/resources/js/Components/SmallTextLinks.vue";
+import SmallTxtBtn from "/resources/js/Components/SmallTxtBtn.vue";
 import LoginImg from "/public/build/assets/img/flix_icon_login-ylw.svg";
 const topMenuArray = {
         firstItem : {
@@ -23,6 +23,6 @@ const topMenuArray = {
 </script>
 <template>
     <div class="flex justify-end bg-black !uppercase" id="topMenu">
-        <SmallTextLinks  :menuArray="topMenuArray"/>
+        <SmallTxtBtn  :menuArray="topMenuArray"/>
     </div>
 </template>
