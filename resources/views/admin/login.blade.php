@@ -59,7 +59,7 @@
             <div class="mt-8 text-flixYellow">
                 <p>
                     Don't have an account?
-                    <a href="/register" class="text-laravel decoration-solid underline decoration-flixYellow"
+                    <a href="/admin/register" class="text-laravel decoration-solid underline decoration-flixYellow"
                         >Register</a
                     >
                 </p>

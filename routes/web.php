@@ -21,7 +21,7 @@ use App\Http\Controllers\ProfileController;
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('admin.login'),
-        'canRegister' => Route::has('register'),
+        'canRegister' => Route::has('admin.register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
@@ -58,6 +58,12 @@ Destroy - delete listing
 
 //Show login form
 Route::get('/admin/login', [UserController::class, 'login'])->name('login')->middleware('guest');
+
+//show register/create form
+Route::get('/admin/register', [UserController::class, 'register'])->name('register')->middleware('guest');
+
+//create new user
+Route::post('/store', [UserController::class, 'store']);
 
 //Log in user
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
