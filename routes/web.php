@@ -5,6 +5,7 @@ use App\Http\Controllers\homepage;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -56,6 +57,8 @@ Destroy - delete listing
 
 */
 
+/* Admin */
+
 //Show login form
 Route::get('/admin/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 
@@ -77,6 +80,20 @@ Route::get('/admin/home', [UserController::class, 'adminHome'])->name('home')->m
 Route::get('AdminHome', function () {
     return Inertia::render('AdminHome');
 })->middleware(['auth', 'verified'])->name('AdminHome');
+
+//Show Admin Home
+Route::get('/admin/home', [UserController::class, 'adminHome'])->name('home')->middleware('auth');
+
+/*Admin End */
+
+
+/* Movies */
+
+//show create form
+Route::get('/movies/addMovies', [MovieController::class, 'addMovies'])->middleware('auth');
+
+
+/* Movies End */
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

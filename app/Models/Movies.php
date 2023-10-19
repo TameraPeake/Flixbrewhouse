@@ -8,4 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Movies extends Model
 {
     use HasFactory;
+
+        /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'title',
+        'rating',
+        'length',
+        'director',
+        'stars',
+        'synopsis',
+        'poster',
+        'banner',
+        'trailer'
+    ];
 }

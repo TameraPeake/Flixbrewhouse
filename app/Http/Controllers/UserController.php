@@ -21,6 +21,7 @@ Update - update edited listing
 Destroy - delete listing
 
 */
+
     //show login form
     public function login() {
         return view('login');
