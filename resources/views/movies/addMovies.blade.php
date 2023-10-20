@@ -11,9 +11,9 @@
 
     <div>
 
-        <form method="POST" action="/storeFilm" class="flex justify-evenly p-10 h-96 items-start flex-wrap" >
+        <form method="POST" action="/storeFilm" class="flex px-10 py-5 items-start flex-wrap" >
             @csrf
-            <div class="mb-6 w-full p-10">
+            <div class="w-full px-10 py-5">
                 <label for="title" class="inline-block text-lg mb-2 text-white">
                     Title
                 </label>
@@ -29,7 +29,7 @@
                 @enderror
             </div>
 
-            <div class="mb-6 lg:w-1/3 md:1/2 w-full p-10">
+            <div class="lg:w-1/3 md:1/2 w-full px-10 py-5">
                 <label for="rating" class="inline-block text-lg mb-2 text-white">
                     Rating
                 </label>
@@ -45,7 +45,7 @@
                 @enderror
             </div>
 
-            <div class="mb-6 lg:w-1/3 md:1/2 w-full p-10">
+            <div class="lg:w-1/3 md:1/2 w-full px-10 py-5">
                 <label for="length" class="inline-block text-lg mb-2 text-white">
                     Length of Film
                 </label>
@@ -61,7 +61,7 @@
                 @enderror
             </div>
 
-            <div class="mb-6 lg:w-1/3 md:1/2 w-full p-10">
+            <div class="lg:w-1/3 md:1/2 w-full px-10 py-5">
                 <label for="director" class="inline-block text-lg mb-2 text-white">
                     Directed by
                 </label>
@@ -77,7 +77,7 @@
                 @enderror
             </div>
 
-            <div class="mb-6 md:w-1/2 w-full p-10">
+            <div class="md:w-1/2 w-full px-10 py-5">
                 <label for="stars" class="inline-block text-lg mb-2 text-white">
                     Stars
                 </label>
@@ -95,7 +95,7 @@
                 @enderror
             </div>
 
-            <div class="mb-6 md:w-1/2 w-full p-10">
+            <div class="md:w-1/2 w-full px-10 py-5">
                 <label for="synopsis" class="inline-block text-lg mb-2 text-white">
                     Synopsis
                 </label>
@@ -114,7 +114,45 @@
                 @enderror
             </div>
 
-            <div class="mb-6 w-full p-10">
+            <div class="md:w-1/2 w-full px-10 py-5">
+                <label for="poster"  class="inline-block text-lg mb-2 text-white">
+                    Movie Poster
+                </label>
+                <input
+                    type="file"
+                    class="p-2 w-full text-white"
+                    name="poster"
+                />
+                {{-- <img
+                    class="w-48 mr-6 mb-6"
+                    src="{{ $movies->logo ? asset('storage/'.$listing->logo) : asset('images/no-image.png') }}"
+                    alt=""
+                /> --}}
+                @error('poster')
+                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="md:w-1/2 w-full px-10 py-5">
+                <label for="banner" class="inline-block text-lg mb-2 text-white">
+                    Movie Banner
+                </label>
+                <input
+                    type="file"
+                    class="p-2 w-full text-white"
+                    name="banner"
+                />
+                {{-- <img
+                    class="w-48 mr-6 mb-6"
+                    src="{{ $listing->logo ? asset('storage/'.$listing->logo) : asset('images/no-image.png') }}"
+                    alt=""
+                /> --}}
+                @error('banner')
+                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="w-full px-10 py-5">
                 <label for="trailer" class="inline-block text-lg mb-2 text-white">
                     Trailer Link
                 </label>
@@ -128,10 +166,10 @@
 
 
 
-            <div class="mb-6 w-full p-10">
+            <div class="w-full px-10 py-5">
                 <button
                     type="submit"
-                    class=" items-center px-4 py-2 bg-flixYellow border border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-flixYellowHover focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 focus:outline-none transition ease-in-out duration-150"
+                    class="items-center px-4 py-2 bg-flixYellow border border-transparent rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-flixYellowHover focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 focus:outline-none transition ease-in-out duration-150"
                 >
                     Sign Up
                 </button>

@@ -9,7 +9,7 @@
         <p class="mb-4 h2">Create an account to add movies and produce</p>
     </header>
 
-    <div class="flex justify-evenly p-10 h-96 items-cente flex-wrap">
+    <div class="flex justify-evenly p-10 items-cente flex-wrap">
 
         <form method="POST" action="/store">
             @csrf
