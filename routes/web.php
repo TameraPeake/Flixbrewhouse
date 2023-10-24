@@ -30,6 +30,9 @@ Route::get('/', function () {
 });
 
 
+// Route::get('/', homepage::class)
+// ->name('Home');
+
 
 Route::get('/', function () {
     return Inertia::render('Home', [
