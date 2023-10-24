@@ -11,7 +11,7 @@
 
     <div>
 
-        <form method="POST" action="/storeFilm" class="flex px-10 py-5 items-start flex-wrap" >
+        <form method="POST" action="/movies" enctype="multipart/form-data" class="flex px-10 py-5 items-start flex-wrap" >
             @csrf
             <div class="w-full px-10 py-5">
                 <label for="title" class="inline-block text-lg mb-2 text-white">

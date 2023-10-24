@@ -92,6 +92,8 @@ Route::get('/admin/home', [UserController::class, 'adminHome'])->name('home')->m
 //show create form
 Route::get('/movies/addMovies', [MovieController::class, 'addMovies'])->middleware('auth');
 
+//store movie
+Route::post('/movies', [MovieController::class, 'createMovie'])->middleware('auth');
 
 /* Movies End */
 

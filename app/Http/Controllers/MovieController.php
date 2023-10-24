@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use auth;
+use App\Models\Movies;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Routing\Controller;
@@ -23,15 +24,15 @@ class MovieController extends Controller
             'director' => 'required',
             'stars' => 'required',
             'synopsis' => 'required',
-            'trailer'
+            'trailer' => 'required',
         ]);
 
         if($request->hasFile('poster')) {
-            $formFields['poster'] = $request->file('poster')->store('poster', 'public'); //this stores it in the public/storate/poster folder
+            $formFields['poster'] = $request->file('poster')->store('/poster', 'public'); //this stores it in the public/storate/poster folder
         }
 
         if($request->hasFile('banner')) {
-            $formFields['banner'] = $request->file('banner')->store('banner', 'public'); //this stores it in the public/storate/banner folder
+            $formFields['banner'] = $request->file('banner')->store('/banner', 'public'); //this stores it in the public/storate/banner folder
         }
 
 
