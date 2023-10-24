@@ -21,7 +21,6 @@
         <!-- Scripts -->
         @routes
         @vite(['resources/js/app.js'])
-        {{-- @inertiaHead --}}
     </head>
     <header class="bg-black py-10 px-5 flex justify-between">
         <div>
@@ -39,7 +38,6 @@
 
     </header>
     <main class="font-sans antialiased bg-woodBG min-h-screen bg-cover">
-        {{-- @inertia --}}
 
         @yield('content')
     </main>

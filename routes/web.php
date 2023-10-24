@@ -1,6 +1,7 @@
 <?php
 
 use Inertia\Inertia;
+use App\Models\Movies;
 use App\Http\Controllers\homepage;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
@@ -29,8 +30,13 @@ Route::get('/', function () {
 });
 
 
-Route::get('/', homepage::class)
-->name('Home');
+
+Route::get('/', function () {
+    return Inertia::render('Home', [
+        'movies' => Movies::latest()->get()
+    ]);
+})->name('home');
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

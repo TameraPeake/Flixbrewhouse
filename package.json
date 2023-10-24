@@ -6,9 +6,9 @@
         "build": "vite build && vite build --ssr"
     },
     "devDependencies": {
-        "@inertiajs/vue3": "^1.0.0",
+        "@inertiajs/vue3": "^1.0.12",
         "@tailwindcss/forms": "^0.5.3",
-        "@vitejs/plugin-vue": "^4.0.0",
+        "@vitejs/plugin-vue": "^4.4.0",
         "@vue/server-renderer": "^3.2.31",
         "autoprefixer": "^10.4.12",
         "axios": "^1.1.2",
@@ -19,6 +19,8 @@
         "vue": "^3.2.41"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^6.4.2"
+        "@fortawesome/fontawesome-free": "^6.4.2",
+        "@inertiajs/inertia": "^0.11.1",
+        "@inertiajs/inertia-vue3": "^0.6.0"
     }
 }
