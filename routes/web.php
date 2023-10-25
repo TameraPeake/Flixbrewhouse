@@ -8,6 +8,7 @@ use Illuminate\Foundation\Application;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ShowtimesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -96,6 +97,8 @@ Route::get('/admin/home', [UserController::class, 'adminHome'])->name('home')->m
 /*Admin End */
 
 
+
+
 /* Movies */
 
 //show create form
@@ -105,6 +108,23 @@ Route::get('/movies/addMovies', [MovieController::class, 'addMovies'])->middlewa
 Route::post('/movies', [MovieController::class, 'createMovie'])->middleware('auth');
 
 /* Movies End */
+
+
+
+
+
+/* Showtimes */
+
+//show create showtime form
+Route::get('/movies/addShowtimes', [ShowtimesController::class, 'addShowtimes'])->middleware('auth');
+
+//store showtimes
+Route::post('/showtimes', [ShowtimesController::class, 'createShowtimes'])->middleware('auth');
+
+/* Showtimes End */
+
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

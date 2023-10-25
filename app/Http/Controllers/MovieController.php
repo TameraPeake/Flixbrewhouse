@@ -10,6 +10,7 @@ use Illuminate\Routing\Controller;
 
 class MovieController extends Controller
 {
+
     //Show movie create form
     public function addMovies() {
         return view('movies/addMovies');
@@ -45,4 +46,5 @@ class MovieController extends Controller
 
         return redirect('/')->with('message', 'Movie created successfully!');
     }
+
 }
