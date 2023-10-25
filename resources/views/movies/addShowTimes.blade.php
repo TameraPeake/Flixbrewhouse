@@ -24,40 +24,21 @@
             </div>
 
             <div class="flex items-center">
-                <label for="movies" class="h2 pr-5">Choose a film:</label>
-                <select name="movies" id="movies">
-                    @foreach ($movies as $movie )
-                        <option class="text-white font-black text-lg font-proximaNovaReg" value="{{ $movie->id }}">{{ $movie->title }}</option>
-                    @endforeach
-                </select>
-                @error('movies')
+                <label for="movieDate" class="h2 pr-5">Choose a Date:</label>
+                <input type="date" id="movieDate" name="movieDate" value="" min="" max="">
+                @error('movieDate')
                     <p class="text-red-500 text-xl mt-1">{{ $message }}</p>
                 @enderror
             </div>
 
-            <div wire:ignore>
-                <input
-                    type="datepickr"
-                    class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
-                    />
-                </div>
-            </div>
-
-            <div class="w-full px-10 py-5">
-                <label for="title" class="inline-block text-lg mb-2 text-white">
-                    Title
-                </label>
-                <input
-                    type="text"
-                    class="border border-gray-200 rounded p-2 w-full"
-                    name="title"
-                    value="{{ old('title') }}"
-                />
-
-                @error('title')
+            <div class="flex items-center">
+                <label for="movieTime1" class="h2 pr-5">Time 1:</label>
+                <input type="time" id="movieTime1" name="movieTime1" value="" min="" max="">
+                @error('movieDate')
                     <p class="text-red-500 text-xl mt-1">{{ $message }}</p>
                 @enderror
             </div>
+
 
 
 
