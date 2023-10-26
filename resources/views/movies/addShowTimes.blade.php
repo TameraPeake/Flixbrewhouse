@@ -1,4 +1,9 @@
 @extends('admin/layout')
+@push('custom-scripts')
+    <script>
+
+    </script>
+@endpush
 
 @section('content')
 
