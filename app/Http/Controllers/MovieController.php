@@ -25,7 +25,7 @@ class MovieController extends Controller
             'director' => 'required',
             'stars' => 'required',
             'synopsis' => 'required',
-            'trailer' => 'required',
+            'poster' => 'required',
         ]);
 
         if($request->hasFile('poster')) {

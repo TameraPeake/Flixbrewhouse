@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('director');
             $table->string('stars');
             $table->string('synopsis', 500);
-            $table->string('poster')->nullable();
+            $table->string('poster');
             $table->string('banner')->nullable();
-            $table->string('trailer', 500);
+            $table->string('trailer', 500)->nullable();
             $table->timestamps();
         });
     }
