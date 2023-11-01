@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Database\Seeders\MovieSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,17 +14,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\User::factory(10)->create();
+        User::factory(10)->create();
+
+        User::factory()->create([
+            'email' => 'test@test.com',
+            'password' => 'test',
+        ]);
+
+        $this->call(MovieSeeder::class);
 
         // UserFactory::factory()->create([
         //     'email' => 'test@test.com',
         //     'password' => 'test',
         // ]);
 
-        \App\Models\User::factory()->create([
-            'email' => 'test@test.com',
-            'password' => 'test',
-        ]);
+
 
         // $user = User::factory()->create([
         //     'name' => 'John Doe',
@@ -34,3 +40,6 @@ class DatabaseSeeder extends Seeder
         // ]);
     }
 }
+
+
+

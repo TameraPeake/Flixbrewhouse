@@ -28,6 +28,8 @@ class ShowtimesController extends Controller
             'stars' => 'required',
             'synopsis' => 'required',
             'trailer' => 'required',
+
+            'movies' => ['required', Rule::unique('movies', 'movies')],
         ]);
 
         if($request->hasFile('poster')) {
