@@ -15,14 +15,15 @@ class Showtimes extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'title',
-        'rating',
-        'length',
-        'director',
-        'stars',
-        'synopsis',
-        'poster',
-        'banner',
-        'trailer'
+        'movieTitle',
+        'movieDate',
+        'movieTime1Begin',
+        'movieTime1End',
+        'movieTime2Begin',
+        'movieTime2End',
+        'movieTime3Begin',
+        'movieTime3End',
+        'movieTime4Begin',
+        'movieTime4End'
     ];
 }

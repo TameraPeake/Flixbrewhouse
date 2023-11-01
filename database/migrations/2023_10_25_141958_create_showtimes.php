@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('showtimes', function (Blueprint $table) {
             $table->id();
+            $table->string('movieTitle');
+            $table->date('movieDate'); //YYYY-MM-DD
+            $table->time('movieTime1Begin'); //00:00:00
+            $table->time('movieTime1End');
+            $table->time('movieTime2Begin');
+            $table->time('movieTime2End');
+            $table->time('movieTime3Begin')->nullable();
+            $table->time('movieTime3End')->nullable();
+            $table->time('movieTime4Begin')->nullable();
+            $table->time('movieTime4End')->nullable();
             $table->timestamps();
         });
     }

@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->create([
             'email' => 'test@test.com',
-            'password' => 'test',
+            'password' => 'testtest',
         ]);
 
         $this->call(MovieSeeder::class);
