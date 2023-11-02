@@ -41,14 +41,16 @@ class ShowtimesController extends Controller
     }
 
 
+
+
     //createShowtimes
     public function createShowtimes(Request $request) {
 
-        // var_dump($request); die();
         $formFields = $request->validate([
+            //         'movies' => ['required', Rule::unique('showtimes', 'movieTitle')->where('movieDate', 'movieDate')],
             'movies' => ['required', Rule::unique('showtimes', 'movieTitle')],
             'movieDate' => 'required',
-            'movieTime1' => 'required',
+            'movieTime1' => ['required', Rule::unique('showtimes', 'movieTime1')],
             'movieTime2' => 'required'
         ]);
 
@@ -77,7 +79,7 @@ class ShowtimesController extends Controller
             $formFields['movieTime4End'] = $this->calculateEndTime($request->input('movieTime4'), $chosenMovieLength);
         }
 
-        dd($formFields);
+        // dd($formFields);
 
 
         Showtimes::create($formFields);
