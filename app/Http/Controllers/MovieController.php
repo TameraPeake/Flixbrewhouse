@@ -29,13 +29,23 @@ class MovieController extends Controller
         ]);
 
         if($request->hasFile('poster')) {
-            $formFields['poster'] = $request->file('poster')->store('/poster', 'public'); //this stores it in the public/storate/poster folder
+            $formFields['poster'] = $request->file('poster')->store('/poster', ['disk' => 'public']); //this stores it in the public/storage/poster folder
         }
 
         if($request->hasFile('banner')) {
-            $formFields['banner'] = $request->file('banner')->store('/banner', 'public'); //this stores it in the public/storate/banner folder
+            $formFields['banner'] = $request->file('banner')->store('/banner', ['disk' => 'public']); //this stores it in the public/storage/banner folder
         }
 
+        /*
+            Symlinks - because laravel is weird, it doesn't upload files directly to the public folder.
+            it wants to keep the public folder clear for public files. Instead if loads files into the storage/app/public
+            folder. You can update that using filesystems.php
+
+            https://stackoverflow.com/questions/51676037/laravel-storage-symlink
+
+            https://laracasts.com/discuss/channels/laravel/why-should-i-create-symbolic-link-in-laravel
+
+         */
 
         //for sitespeed, I don't want to upload the actual trailer...I could use youtube links
         // if($request->hasFile('trailer')) {

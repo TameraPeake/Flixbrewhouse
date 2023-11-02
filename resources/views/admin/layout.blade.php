@@ -20,7 +20,6 @@
         @stack('custom-scripts')
         <!-- Scripts -->
         @routes
-        @vite(['resources/js/app.js'])
     </head>
     <header class="bg-black py-10 px-5 flex justify-between">
         <div>
